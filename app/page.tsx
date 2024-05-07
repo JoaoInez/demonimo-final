@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import Image from "next/image";
+import Link from "next/link";
 
 const weights = [
   "font-thin",
@@ -61,14 +62,14 @@ export default function Home() {
         height={200}
         className="pointer-events-none absolute bottom-12 left-1/2 hidden"
       />
-      <h1 className="group relative cursor-default text-7xl sm:text-9xl">
-        <Image
-          src="/lilguy.gif"
-          alt="A cute lil guy dancing"
-          width={400}
-          height={200}
-          className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2"
-        />
+      <h1 className="group relative z-[1] cursor-default text-7xl sm:text-9xl">
+        {/* <Image */}
+        {/*   src="/lilguy.gif" */}
+        {/*   alt="A cute lil guy dancing" */}
+        {/*   width={400} */}
+        {/*   height={200} */}
+        {/*   className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2" */}
+        {/* /> */}
         {"Demonimo".split("").map((letter, i) => (
           <span
             key={nanoid()}
@@ -77,6 +78,14 @@ export default function Home() {
             {letter}
           </span>
         ))}
+        <div className="pointer-events-none absolute left-2/3 top-40 -z-[1] h-[80vh] w-full -translate-y-1/2">
+          <Image
+            src="/FROGGINS.png"
+            alt="frog"
+            fill
+            className="object-contain"
+          />
+        </div>
       </h1>
       <h2 className=" mt-4 text-xl">Magazine coming soon</h2>
     </main>
